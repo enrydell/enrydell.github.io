@@ -1,759 +1,604 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Henrique Dell | Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Henrique Dell — Senior iOS & Full Stack Engineer</title>
+    
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="Henrique Dell — Senior iOS & Full Stack Engineer">
+    <meta name="description" content="Senior iOS Developer and Full Stack Engineer specializing in Swift, SwiftUI, UIKit, Node.js, and high-performance mobile systems.">
+    <meta name="author" content="Henrique Dell">
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml"
-    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%2309090b' stroke='%2327272a' stroke-width='4'/%3E%3Cpath d='M22 32L14 50L22 68' stroke='%23818cf8' stroke-width='6' stroke-linecap='round' stroke-linejoin='round' fill='none' opacity='0.7'/%3E%3Cpath d='M78 32L86 50L78 68' stroke='%2322d3ee' stroke-width='6' stroke-linecap='round' stroke-linejoin='round' fill='none' opacity='0.7'/%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%23818cf8'/%3E%3Cstop offset='100%25' stop-color='%2322d3ee'/%3E%3C/linearGradient%3E%3C/defs%3E%3Ctext x='50' y='63' font-family='Inter, -apple-system, BlinkMacSystemFont, sans-serif' font-weight='900' font-size='38' fill='url(%23g)' text-anchor='middle'%3EHD%3C/text%3E%3C/svg%3E">
+    <!-- Open Graph / Facebook / LinkedIn -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://enrydell.github.io/">
+    <meta property="og:title" content="Henrique Dell — Senior iOS & Full Stack Engineer">
+    <meta property="og:description" content="Senior iOS Developer and Full Stack Engineer specializing in Swift, SwiftUI, UIKit, Node.js, and high-performance mobile systems.">
+    <meta property="og:image" content="https://github.com/enrydell.png">
 
-  <!-- Primary Meta Tags -->
-  <meta name="title" content="Henrique Dell | Senior iOS Developer & Full-Stack Engineer">
-  <meta name="description"
-    content="Portfolio of Henrique Dell Agnolo, Senior iOS Developer and Full-Stack Engineer specializing in Swift, SwiftUI, UIKit, Node.js, and modern application development.">
-  <meta name="keywords"
-    content="Henrique Dell Agnolo, Henrique Dell, iOS Developer, Full-Stack Engineer, Swift, SwiftUI, Node.js, Software Engineer, Portfolio">
-  <meta name="author" content="Henrique Dell Agnolo">
-  <meta name="theme-color" content="#000000">
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://enrydell.github.io/">
+    <meta property="twitter:title" content="Henrique Dell — Senior iOS & Full Stack Engineer">
+    <meta property="twitter:description" content="Senior iOS Developer and Full Stack Engineer specializing in Swift, SwiftUI, UIKit, Node.js, and high-performance mobile systems.">
+    <meta property="twitter:image" content="https://github.com/enrydell.png">
 
-  <!-- Open Graph / Facebook / LinkedIn -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://enrydell.github.io/">
-  <meta property="og:title" content="Henrique Dell | Senior iOS Developer & Full-Stack Engineer">
-  <meta property="og:description"
-    content="Explore the portfolio and projects of Henrique Dell Agnolo, Senior iOS Developer & Full-Stack Engineer featuring production mobile apps and open-source software.">
-  <meta property="og:image" content="https://github.com/enrydell.png">
-  <meta property="og:site_name" content="Henrique Dell Portfolio">
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%2309090b'/><rect x='2' y='2' width='96' height='96' rx='20' fill='none' stroke='%2327272a' stroke-width='3'/><path d='M22 50L34 38M22 50L34 62' stroke='%2306b6d4' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'/><path d='M78 50L66 38M78 50L66 62' stroke='%2306b6d4' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'/><text x='50' y='60' font-family='system-ui, -apple-system, sans-serif' font-weight='900' font-size='28' fill='%23f4f4f5' text-anchor='middle'>HD</text></svg>">
 
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:url" content="https://enrydell.github.io/">
-  <meta name="twitter:title" content="Henrique Dell | Senior iOS Developer & Full-Stack Engineer">
-  <meta name="twitter:description"
-    content="Explore the portfolio and projects of Henrique Dell Agnolo, Senior iOS Developer & Full-Stack Engineer featuring production mobile apps and open-source software.">
-  <meta name="twitter:image" content="https://github.com/enrydell.png">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
 
-  <!-- Tailwind CSS -->
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- Phosphor Icons for clean, modern icons -->
-  <script src="https://unpkg.com/@phosphor-icons/web"></script>
-
-  <!-- Google Fonts (Inter) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      background-color: #000000;
-      /* Pitch black base background */
-      color: #f8fafc;
-    }
-
-    /* Hide scrollbar for Chrome, Safari and Opera */
-    .no-scrollbar::-webkit-scrollbar {
-      display: none;
-    }
-
-    /* Hide scrollbar for IE, Edge and Firefox */
-    .no-scrollbar {
-      -ms-overflow-style: none;
-      /* IE and Edge */
-      scrollbar-width: none;
-      /* Firefox */
-    }
-  </style>
+    <style>
+        /* Custom scrollbar hiding for horizontal carousels */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
 </head>
+<body class="bg-black text-zinc-100 antialiased font-sans selection:bg-cyan-500 selection:text-black">
 
-<body class="antialiased selection:bg-indigo-500 selection:text-white">
+    <!-- Sticky Navigation Topbar -->
+    <header class="sticky top-0 z-50 backdrop-blur-md bg-black/80 border-b border-zinc-800/80 transition-all duration-300">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-3 group">
+                <img src="https://github.com/enrydell.png" alt="Henrique Dell" class="w-9 h-9 rounded-full border border-zinc-700 group-hover:border-cyan-400 transition-colors">
+                <span class="font-bold text-lg text-zinc-100 group-hover:text-cyan-400 transition-colors">Henrique Dell</span>
+            </a>
+            <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-zinc-400">
+                <a href="#professional" class="hover:text-cyan-400 transition-colors">Professional</a>
+                <a href="#personal" class="hover:text-cyan-400 transition-colors">Personal</a>
+                <a href="#about" class="hover:text-cyan-400 transition-colors">About Me</a>
+                <a href="#contact" class="hover:text-cyan-400 transition-colors">Contact</a>
+            </nav>
+            <a href="#contact" class="md:hidden text-xs bg-zinc-800 border border-zinc-700 hover:bg-zinc-700 text-zinc-100 px-3 py-1.5 rounded-lg transition-colors">
+                Contact
+            </a>
+        </div>
+    </header>
 
-  <nav
-    class="fixed w-full z-50 top-0 transition-all duration-300 bg-black/90 backdrop-blur-md border-b border-zinc-800/80">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between items-center h-16">
-        <div class="flex-shrink-0">
-          <a href="#home" class="block hover:opacity-80 transition-opacity">
-            <img src="https://github.com/enrydell.png" alt="Henrique Dell"
-              class="h-10 w-10 rounded-full border border-zinc-700 object-cover">
-          </a>
+    <!-- Hero Section -->
+    <section class="max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-24 border-b border-zinc-800/60">
+        <div class="max-w-3xl">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-950/50 border border-cyan-800/50 text-cyan-400 text-xs font-mono mb-6">
+                <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+                Senior Mobile & Full-Stack Engineer
+            </div>
+            <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-white mb-6">
+                Crafting high-performance mobile apps and systems.
+            </h1>
+            <p class="text-lg sm:text-xl text-zinc-400 leading-relaxed mb-8">
+                Senior iOS Developer and software architect with a passion for clean code, solid design patterns, custom game graphics, and seamless user experiences.
+            </p>
+            <div class="flex flex-wrap items-center gap-4">
+                <a href="https://github.com/enrydell" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-zinc-900 border border-zinc-700 hover:border-cyan-500 hover:text-cyan-400 text-zinc-200 px-4 py-2.5 rounded-xl font-medium text-sm transition-all shadow-lg">
+                    <i class="ph ph-github-logo text-lg"></i> GitHub
+                </a>
+                <a href="https://www.linkedin.com/in/henriquedell/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-zinc-900 border border-zinc-700 hover:border-cyan-500 hover:text-cyan-400 text-zinc-200 px-4 py-2.5 rounded-xl font-medium text-sm transition-all shadow-lg">
+                    <i class="ph ph-linkedin-logo text-lg"></i> LinkedIn
+                </a>
+                <a href="mailto:henriquedell1@gmail.com" class="inline-flex items-center gap-2 bg-zinc-900 border border-zinc-700 hover:border-cyan-500 hover:text-cyan-400 text-zinc-200 px-4 py-2.5 rounded-xl font-medium text-sm transition-all shadow-lg">
+                    <i class="ph ph-envelope-simple text-lg"></i> Email
+                </a>
+            </div>
         </div>
-        <div class="hidden md:block">
-          <div class="ml-10 flex items-baseline space-x-8">
-            <a href="#home"
-              class="text-zinc-400 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Home</a>
-            <a href="#projects"
-              class="text-zinc-400 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Projects</a>
-            <a href="#about"
-              class="text-zinc-400 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">About</a>
-            <a href="#contact"
-              class="text-zinc-400 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Contact</a>
-          </div>
-        </div>
-        <!-- Mobile menu button -->
-        <div class="md:hidden flex items-center">
-          <button id="mobile-menu-btn" class="text-zinc-400 hover:text-white focus:outline-none p-2">
-            <i class="ph ph-list text-2xl"></i>
-          </button>
-        </div>
-      </div>
-    </div>
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="hidden md:hidden bg-zinc-950 border-b border-zinc-800">
-      <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-        <a href="#home" class="text-zinc-400 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Home</a>
-        <a href="#projects"
-          class="text-zinc-400 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Projects</a>
-        <a href="#about"
-          class="text-zinc-400 hover:text-white block px-3 py-2 rounded-md text-base font-medium">About</a>
-        <a href="#contact"
-          class="text-zinc-400 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Contact</a>
-      </div>
-    </div>
-  </nav>
-
-  <main>
-    <section id="home" class="min-h-screen flex items-center justify-center pt-16 px-4 bg-black">
-      <div class="max-w-4xl mx-auto text-center">
-        <h1 class="text-5xl md:text-7xl font-bold tracking-tight mb-6">
-          Henrique <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-cyan-400">Dell</span>
-        </h1>
-        <p class="mt-4 text-xl md:text-2xl text-zinc-400 max-w-2xl mx-auto font-light leading-relaxed">
-          Senior iOS Developer & Full-Stack Engineer crafting robust mobile experiences and scalable backends.
-        </p>
-
-        <div class="mt-10 flex justify-center gap-6">
-          <a href="https://github.com/enrydell" target="_blank"
-            class="text-zinc-400 hover:text-white transition-colors flex items-center gap-2 group">
-            <i class="ph-fill ph-github-logo text-3xl group-hover:scale-110 transition-transform"></i>
-            <span class="hidden sm:inline font-medium">GitHub</span>
-          </a>
-          <a href="https://www.linkedin.com/in/henriquedell/" target="_blank"
-            class="text-zinc-400 hover:text-[#0A66C2] transition-colors flex items-center gap-2 group">
-            <i class="ph-fill ph-linkedin-logo text-3xl group-hover:scale-110 transition-transform"></i>
-            <span class="hidden sm:inline font-medium">LinkedIn</span>
-          </a>
-          <a href="mailto:henriquedell1@gmail.com"
-            class="text-zinc-400 hover:text-indigo-400 transition-colors flex items-center gap-2 group">
-            <i class="ph-fill ph-envelope-simple text-3xl group-hover:scale-110 transition-transform"></i>
-            <span class="hidden sm:inline font-medium">Email</span>
-          </a>
-        </div>
-      </div>
     </section>
 
-    <section id="projects" class="py-24 bg-zinc-900/80 border-y border-zinc-800/80">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center text-white">Featured Projects</h2>
+    <!-- Professional Projects Section -->
+    <section id="professional" class="bg-zinc-900/80 py-16 sm:py-20 border-b border-zinc-800/80">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="flex items-center justify-between mb-8">
+                <div>
+                    <h2 class="text-2xl sm:text-3xl font-bold text-white mb-2 flex items-center gap-2">
+                        <i class="ph ph-briefcase text-cyan-400"></i> Professional Projects
+                    </h2>
+                    <p class="text-zinc-400 text-sm sm:text-base">Production mobile applications delivered for healthcare and enterprise clients.</p>
+                </div>
+                <!-- Navigation Arrows -->
+                <div class="flex items-center gap-2">
+                    <button id="pro-prev" class="p-2.5 rounded-xl bg-zinc-800 border border-zinc-700 hover:bg-zinc-700 hover:text-cyan-400 text-zinc-300 transition-colors" aria-label="Previous Project">
+                        <i class="ph ph-caret-left text-lg"></i>
+                    </button>
+                    <button id="pro-next" class="p-2.5 rounded-xl bg-zinc-800 border border-zinc-700 hover:bg-zinc-700 hover:text-cyan-400 text-zinc-300 transition-colors" aria-label="Next Project">
+                        <i class="ph ph-caret-right text-lg"></i>
+                    </button>
+                </div>
+            </div>
 
-        <!-- Filters -->
-        <div class="flex justify-center gap-3 sm:gap-4 mb-12">
-          <button
-            class="filter-btn active px-5 py-2 rounded-full bg-indigo-600 text-white font-medium transition-all hover:bg-indigo-700 border border-transparent text-sm sm:text-base"
-            data-filter="all">All</button>
-          <button
-            class="filter-btn px-5 py-2 rounded-full bg-black/60 border border-zinc-800 text-zinc-400 font-medium transition-all hover:bg-zinc-800 hover:text-white text-sm sm:text-base"
-            data-filter="professional">Professional</button>
-          <button
-            class="filter-btn px-5 py-2 rounded-full bg-black/60 border border-zinc-800 text-zinc-400 font-medium transition-all hover:bg-zinc-800 hover:text-white text-sm sm:text-base"
-            data-filter="personal">Personal</button>
+            <!-- Professional Carousel -->
+            <div id="pro-carousel" class="flex gap-6 overflow-x-auto snap-x snap-mandatory no-scrollbar pb-6">
+                <!-- Afya Whitebook -->
+                <div class="project-card flex-shrink-0 w-[88vw] sm:w-[420px] snap-start bg-zinc-950 border border-zinc-800 hover:border-zinc-700 rounded-2xl p-6 flex flex-col justify-between transition-all">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-xl bg-blue-950/60 border border-blue-800/50 flex items-center justify-center text-blue-400">
+                                    <i class="ph ph-first-aid text-xl"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-white">Afya Whitebook</h3>
+                            </div>
+                            <span class="px-2.5 py-1 rounded-full text-xs font-mono bg-emerald-950/60 border border-emerald-800/60 text-emerald-400">Production</span>
+                        </div>
+                        <p class="text-zinc-400 text-sm leading-relaxed mb-6">Leading clinical decision support app in Brazil, serving thousands of healthcare professionals daily with offline-first medical content.</p>
+                        <div class="flex flex-wrap gap-1.5 mb-6">
+                            <span class="px-2 py-0.5 rounded text-xs font-mono bg-zinc-900 border border-zinc-800 text-zinc-300">Swift</span>
+                            <span class="px-2 py-0.5 rounded text-xs font-mono bg-zinc-900 border border-zinc-800 text-zinc-300">SwiftUI</span>
+                            <span class="px-2 py-0.5 rounded text-xs font-mono bg-zinc-900 border border-zinc-800 text-zinc-300">UIKit</span>
+                            <span class="px-2 py-0.5 rounded text-xs font-mono bg-zinc-900 border border-zinc-800 text-zinc-300">GRDB</span>
+                            <span class="px-2 py-0.5 rounded text-xs font-mono bg-zinc-900 border border-zinc-800 text-zinc-300">Combine</span>
+                            <span class="px-2 py-0.5 rounded text-xs font-mono bg-zinc-900 border border-zinc-800 text-zinc-300">MVVM</span>
+                        </div>
+                    </div>
+                    <a href="https://apps.apple.com/br/app/afya-whitebook-app-medicina/id638521744" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 w-full py-2.5 px-4 rounded-xl bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 text-sm font-medium text-cyan-400 transition-colors">
+                        View on App Store <i class="ph ph-arrow-up-right"></i>
+                    </a>
+                </div>
+
+                <!-- Allina Health -->
+                <div class="project-card flex-shrink-0 w-[88vw] sm:w-[420px] snap-start bg-zinc-950 border border-zinc-800 hover:border-zinc-700 rounded-2xl p-6 flex flex-col justify-between transition-all">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-xl bg-teal-950/60 border border-teal-800/50 flex items-center justify-center text-teal-400">
+                                    <i class="ph ph-hospital text-xl"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-white">Allina Health</h3>
+                            </div>
+                            <span class="px-2.5 py-1 rounded-full text-xs font-mono bg-emerald-950/60 border border-emerald-800/60 text-emerald-400">Production</span>
+                        </div>
+                        <p class="text-zinc-400 text-sm leading-relaxed mb-6">Patient portal mobile ecosystem providing appointment management, virtual visits, test results, and medical record access.</p>
+                        <div class="flex flex-wrap gap-1.5 mb-6">
+                            <span class="px-2 py-0.5 rounded text-xs font-mono bg-zinc-900 border border-zinc-800 text-zinc-300">Swift</span>
+                            <span class="px-2 py-0.5 rounded text-xs font-mono bg-zinc-900 border border-zinc-800 text-zinc-300">SwiftUI</span>
+                            <span class="px-2 py-0.5 rounded text-xs font-mono bg-zinc-900 border border-zinc-800 text-zinc-300">UIKit</span>
+                            <span class="px-2 py-0.5 rounded text-xs font-mono bg-zinc-900 border border-zinc-800 text-zinc-300">Core Data</span>
+                            <span class="px-2 py-0.5 rounded text-xs font-mono bg-zinc-900 border border-zinc-800 text-zinc-300">MVC</span>
+                        </div>
+                    </div>
+                    <a href="https://apps.apple.com/us/app/allina-health/id1265997284" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 w-full py-2.5 px-4 rounded-xl bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 text-sm font-medium text-cyan-400 transition-colors">
+                        View on App Store <i class="ph ph-arrow-up-right"></i>
+                    </a>
+                </div>
+
+                <!-- Provider to Provider -->
+                <div class="project-card flex-shrink-0 w-[88vw] sm:w-[420px] snap-start bg-zinc-950 border border-zinc-800 hover:border-zinc-700 rounded-2xl p-6 flex flex-col justify-between transition-all">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-xl bg-indigo-950/60 border border-indigo-800/50 flex items-center justify-center text-indigo-400">
+                                    <i class="ph ph-user-list text-xl"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-white">Provider to Provider</h3>
+                            </div>
+                            <span class="px-2.5 py-1 rounded-full text-xs font-mono bg-emerald-950/60 border border-emerald-800/60 text-emerald-400">Production</span>
+                        </div>
+                        <p class="text-zinc-400 text-sm leading-relaxed mb-6">Streamlined peer consultation and referral platform connecting physicians and specialists across regional healthcare networks.</p>
+                        <div class="flex flex-wrap gap-1.5 mb-6">
+                            <span class="px-2 py-0.5 rounded text-xs font-mono bg-zinc-900 border border-zinc-800 text-zinc-300">Swift</span>
+                            <span class="px-2 py-0.5 rounded text-xs font-mono bg-zinc-900 border border-zinc-800 text-zinc-300">UIKit</span>
+                            <span class="px-2 py-0.5 rounded text-xs font-mono bg-zinc-900 border border-zinc-800 text-zinc-300">MVC</span>
+                        </div>
+                    </div>
+                    <a href="https://apps.apple.com/us/app/provider-to-provider/id1505380722" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 w-full py-2.5 px-4 rounded-xl bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 text-sm font-medium text-cyan-400 transition-colors">
+                        View on App Store <i class="ph ph-arrow-up-right"></i>
+                    </a>
+                </div>
+
+                <!-- Take Heart -->
+                <div class="project-card flex-shrink-0 w-[88vw] sm:w-[420px] snap-start bg-zinc-950 border border-zinc-800 hover:border-zinc-700 rounded-2xl p-6 flex flex-col justify-between transition-all">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-xl bg-rose-950/60 border border-rose-800/50 flex items-center justify-center text-rose-400">
+                                    <i class="ph ph-heartbeat text-xl"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-white">Take Heart</h3>
+                            </div>
+                            <span class="px-2.5 py-1 rounded-full text-xs font-mono bg-emerald-950/60 border border-emerald-800/60 text-emerald-400">Production</span>
+                        </div>
+                        <p class="text-zinc-400 text-sm leading-relaxed mb-6">Specialized cardiac recovery companion assisting patients through post-surgery recovery plans and health tracking.</p>
+                        <div class="flex flex-wrap gap-1.5 mb-6">
+                            <span class="px-2 py-0.5 rounded text-xs font-mono bg-zinc-900 border border-zinc-800 text-zinc-300">Swift</span>
+                            <span class="px-2 py-0.5 rounded text-xs font-mono bg-zinc-900 border border-zinc-800 text-zinc-300">UIKit</span>
+                            <span class="px-2 py-0.5 rounded text-xs font-mono bg-zinc-900 border border-zinc-800 text-zinc-300">Core Data</span>
+                            <span class="px-2 py-0.5 rounded text-xs font-mono bg-zinc-900 border border-zinc-800 text-zinc-300">MVC</span>
+                        </div>
+                    </div>
+                    <a href="https://apps.apple.com/us/app/take-heart-by-allina-health/id1486199598" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 w-full py-2.5 px-4 rounded-xl bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 text-sm font-medium text-cyan-400 transition-colors">
+                        View on App Store <i class="ph ph-arrow-up-right"></i>
+                    </a>
+                </div>
+
+                <!-- Beginnings -->
+                <div class="project-card flex-shrink-0 w-[88vw] sm:w-[420px] snap-start bg-zinc-950 border border-zinc-800 hover:border-zinc-700 rounded-2xl p-6 flex flex-col justify-between transition-all">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-xl bg-purple-950/60 border border-purple-800/50 flex items-center justify-center text-purple-400">
+                                    <i class="ph ph-baby text-xl"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-white">Beginnings</h3>
+                            </div>
+                            <span class="px-2.5 py-1 rounded-full text-xs font-mono bg-emerald-950/60 border border-emerald-800/60 text-emerald-400">Production</span>
+                        </div>
+                        <p class="text-zinc-400 text-sm leading-relaxed mb-6">Pregnancy and parenting tracking guide supporting families through weekly milestones, appointments, and care tips.</p>
+                        <div class="flex flex-wrap gap-1.5 mb-6">
+                            <span class="px-2 py-0.5 rounded text-xs font-mono bg-zinc-900 border border-zinc-800 text-zinc-300">Swift</span>
+                            <span class="px-2 py-0.5 rounded text-xs font-mono bg-zinc-900 border border-zinc-800 text-zinc-300">UIKit</span>
+                            <span class="px-2 py-0.5 rounded text-xs font-mono bg-zinc-900 border border-zinc-800 text-zinc-300">Core Data</span>
+                            <span class="px-2 py-0.5 rounded text-xs font-mono bg-zinc-900 border border-zinc-800 text-zinc-300">MVC</span>
+                        </div>
+                    </div>
+                    <a href="https://apps.apple.com/us/app/beginnings-by-allina-health/id1349303209" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 w-full py-2.5 px-4 rounded-xl bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 text-sm font-medium text-cyan-400 transition-colors">
+                        View on App Store <i class="ph ph-arrow-up-right"></i>
+                    </a>
+                </div>
+
+                <!-- Cancer Connection -->
+                <div class="project-card flex-shrink-0 w-[88vw] sm:w-[420px] snap-start bg-zinc-950 border border-zinc-800 hover:border-zinc-700 rounded-2xl p-6 flex flex-col justify-between transition-all">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-xl bg-amber-950/60 border border-amber-800/50 flex items-center justify-center text-amber-500">
+                                    <i class="ph ph-hospital text-xl"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-white">Cancer Connection</h3>
+                            </div>
+                            <span class="px-2.5 py-1 rounded-full text-xs font-mono bg-emerald-950/60 border border-emerald-800/60 text-emerald-400">Production</span>
+                        </div>
+                        <p class="text-zinc-400 text-sm leading-relaxed mb-6">Patient support community app offering oncology resources, scheduling assistance, and peer connection tools.</p>
+                        <div class="flex flex-wrap gap-1.5 mb-6">
+                            <span class="px-2 py-0.5 rounded text-xs font-mono bg-zinc-900 border border-zinc-800 text-zinc-300">Swift</span>
+                            <span class="px-2 py-0.5 rounded text-xs font-mono bg-zinc-900 border border-zinc-800 text-zinc-300">SwiftUI</span>
+                            <span class="px-2 py-0.5 rounded text-xs font-mono bg-zinc-900 border border-zinc-800 text-zinc-300">MVVM</span>
+                        </div>
+                    </div>
+                    <a href="https://apps.apple.com/us/app/cancer-connection/id6758400931" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 w-full py-2.5 px-4 rounded-xl bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 text-sm font-medium text-cyan-400 transition-colors">
+                        View on App Store <i class="ph ph-arrow-up-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Carousel Pagination Dots -->
+            <div id="pro-dots" class="flex items-center justify-center gap-2 mt-4"></div>
         </div>
-
-        <div class="relative group flex items-center">
-
-          <!-- Left Arrow -->
-          <button id="scroll-left" aria-label="Scroll left"
-            class="absolute -left-4 md:-left-12 z-10 p-3 bg-zinc-950 border border-zinc-700 rounded-full text-zinc-300 hover:text-white hover:bg-zinc-800 transition-all hidden sm:flex shadow-lg shadow-black/80">
-            <i class="ph-bold ph-caret-left text-xl"></i>
-          </button>
-
-          <!-- Carousel Container -->
-          <div id="project-carousel"
-            class="flex overflow-x-auto gap-6 pb-8 pt-4 snap-x snap-mandatory no-scrollbar scroll-smooth w-full px-2">
-
-            <!-- Afya Whitebook -->
-            <div
-              class="project-card flex-none w-[85vw] sm:w-[380px] snap-center bg-zinc-950 rounded-2xl border border-zinc-800 flex flex-col hover:border-indigo-500/50 hover:shadow-[0_0_30px_rgba(99,102,241,0.15)] transition-all duration-300"
-              data-category="professional">
-              <div class="p-6 flex flex-col h-full">
-                <div class="flex items-center gap-3 mb-3">
-                  <div
-                    class="w-10 h-10 bg-blue-500/10 rounded-lg flex items-center justify-center text-blue-400 flex-shrink-0">
-                    <i class="ph ph-heartbeat text-xl"></i>
-                  </div>
-                  <h3 class="text-xl font-bold truncate text-white">Afya Whitebook</h3>
-                </div>
-                <div class="mb-4">
-                  <span
-                    class="inline-block px-2.5 py-1 text-[10px] uppercase tracking-wider font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 rounded-full">Production</span>
-                </div>
-                <p class="text-zinc-400 text-sm mb-5">A leading medical app in Brazil providing clinical decision
-                  support. Developed robust iOS features for healthcare professionals.</p>
-                <div class="flex flex-wrap gap-2 mb-6 flex-grow content-start">
-                  <span class="px-2 py-1 bg-black border border-zinc-800 text-zinc-300 text-xs rounded">Swift</span>
-                  <span class="px-2 py-1 bg-black border border-zinc-800 text-zinc-300 text-xs rounded">SwiftUI</span>
-                  <span class="px-2 py-1 bg-black border border-zinc-800 text-zinc-300 text-xs rounded">UIKit</span>
-                  <span class="px-2 py-1 bg-black border border-zinc-800 text-zinc-300 text-xs rounded">GRDB</span>
-                  <span class="px-2 py-1 bg-black border border-zinc-800 text-zinc-300 text-xs rounded">Combine</span>
-                  <span class="px-2 py-1 bg-black border border-zinc-800 text-zinc-300 text-xs rounded">MVVM</span>
-                </div>
-                <div class="mt-auto pt-4 border-t border-zinc-800/60">
-                  <a href="https://apps.apple.com/br/app/afya-whitebook-app-medicina/id638521744" target="_blank"
-                    class="inline-flex items-center text-indigo-400 hover:text-indigo-300 text-sm font-medium transition-colors">
-                    View on App Store <i class="ph-bold ph-arrow-right ml-2"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <!-- Allina Health -->
-            <div
-              class="project-card flex-none w-[85vw] sm:w-[380px] snap-center bg-zinc-950 rounded-2xl border border-zinc-800 flex flex-col hover:border-indigo-500/50 hover:shadow-[0_0_30px_rgba(99,102,241,0.15)] transition-all duration-300"
-              data-category="professional">
-              <div class="p-6 flex flex-col h-full">
-                <div class="flex items-center gap-3 mb-3">
-                  <div
-                    class="w-10 h-10 bg-emerald-500/10 rounded-lg flex items-center justify-center text-emerald-400 flex-shrink-0">
-                    <i class="ph ph-hospital text-xl"></i>
-                  </div>
-                  <h3 class="text-xl font-bold truncate text-white">Allina Health</h3>
-                </div>
-                <div class="mb-4">
-                  <span
-                    class="inline-block px-2.5 py-1 text-[10px] uppercase tracking-wider font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 rounded-full">Production</span>
-                </div>
-                <p class="text-zinc-400 text-sm mb-5">Comprehensive patient portal app enabling users to manage health
-                  records, appointments, and communicate with providers.</p>
-                <div class="flex flex-wrap gap-2 mb-6 flex-grow content-start">
-                  <span class="px-2 py-1 bg-black border border-zinc-800 text-zinc-300 text-xs rounded">Swift</span>
-                  <span class="px-2 py-1 bg-black border border-zinc-800 text-zinc-300 text-xs rounded">SwiftUI</span>
-                  <span class="px-2 py-1 bg-black border border-zinc-800 text-zinc-300 text-xs rounded">UIKit</span>
-                  <span class="px-2 py-1 bg-black border border-zinc-800 text-zinc-300 text-xs rounded">Core Data</span>
-                  <span class="px-2 py-1 bg-black border border-zinc-800 text-zinc-300 text-xs rounded">MVC</span>
-                </div>
-                <div class="mt-auto pt-4 border-t border-zinc-800/60">
-                  <a href="https://apps.apple.com/us/app/allina-health/id1265997284" target="_blank"
-                    class="inline-flex items-center text-indigo-400 hover:text-indigo-300 text-sm font-medium transition-colors">
-                    View on App Store <i class="ph-bold ph-arrow-right ml-2"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <!-- Provider to Provider -->
-            <div
-              class="project-card flex-none w-[85vw] sm:w-[380px] snap-center bg-zinc-950 rounded-2xl border border-zinc-800 flex flex-col hover:border-indigo-500/50 hover:shadow-[0_0_30px_rgba(99,102,241,0.15)] transition-all duration-300"
-              data-category="professional">
-              <div class="p-6 flex flex-col h-full">
-                <div class="flex items-center gap-3 mb-3">
-                  <div
-                    class="w-10 h-10 bg-purple-500/10 rounded-lg flex items-center justify-center text-purple-400 flex-shrink-0">
-                    <i class="ph ph-users text-xl"></i>
-                  </div>
-                  <h3 class="text-xl font-bold truncate text-white">Provider to Provider</h3>
-                </div>
-                <div class="mb-4">
-                  <span
-                    class="inline-block px-2.5 py-1 text-[10px] uppercase tracking-wider font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 rounded-full">Production</span>
-                </div>
-                <p class="text-zinc-400 text-sm mb-5">Secure communication platform designed specifically for healthcare
-                  providers to collaborate efficiently.</p>
-                <div class="flex flex-wrap gap-2 mb-6 flex-grow content-start">
-                  <span class="px-2 py-1 bg-black border border-zinc-800 text-zinc-300 text-xs rounded">Swift</span>
-                  <span class="px-2 py-1 bg-black border border-zinc-800 text-zinc-300 text-xs rounded">UIKit</span>
-                  <span class="px-2 py-1 bg-black border border-zinc-800 text-zinc-300 text-xs rounded">MVC</span>
-                </div>
-                <div class="mt-auto pt-4 border-t border-zinc-800/60">
-                  <a href="https://apps.apple.com/us/app/provider-to-provider/id1505380722" target="_blank"
-                    class="inline-flex items-center text-indigo-400 hover:text-indigo-300 text-sm font-medium transition-colors">
-                    View on App Store <i class="ph-bold ph-arrow-right ml-2"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <!-- Take Heart -->
-            <div
-              class="project-card flex-none w-[85vw] sm:w-[380px] snap-center bg-zinc-950 rounded-2xl border border-zinc-800 flex flex-col hover:border-indigo-500/50 hover:shadow-[0_0_30px_rgba(99,102,241,0.15)] transition-all duration-300"
-              data-category="professional">
-              <div class="p-6 flex flex-col h-full">
-                <div class="flex items-center gap-3 mb-3">
-                  <div
-                    class="w-10 h-10 bg-red-500/10 rounded-lg flex items-center justify-center text-red-400 flex-shrink-0">
-                    <i class="ph ph-activity text-xl"></i>
-                  </div>
-                  <h3 class="text-xl font-bold truncate text-white">Take Heart</h3>
-                </div>
-                <div class="mb-4">
-                  <span
-                    class="inline-block px-2.5 py-1 text-[10px] uppercase tracking-wider font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 rounded-full">Production</span>
-                </div>
-                <p class="text-zinc-400 text-sm mb-5">Cardiac rehabilitation and monitoring app by Allina Health,
-                  supporting patients through their recovery journey.</p>
-                <div class="flex flex-wrap gap-2 mb-6 flex-grow content-start">
-                  <span class="px-2 py-1 bg-black border border-zinc-800 text-zinc-300 text-xs rounded">Swift</span>
-                  <span class="px-2 py-1 bg-black border border-zinc-800 text-zinc-300 text-xs rounded">UIKit</span>
-                  <span class="px-2 py-1 bg-black border border-zinc-800 text-zinc-300 text-xs rounded">Core Data</span>
-                  <span class="px-2 py-1 bg-black border border-zinc-800 text-zinc-300 text-xs rounded">MVC</span>
-                </div>
-                <div class="mt-auto pt-4 border-t border-zinc-800/60">
-                  <a href="https://apps.apple.com/us/app/take-heart-by-allina-health/id1486199598" target="_blank"
-                    class="inline-flex items-center text-indigo-400 hover:text-indigo-300 text-sm font-medium transition-colors">
-                    View on App Store <i class="ph-bold ph-arrow-right ml-2"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <!-- Beginnings -->
-            <div
-              class="project-card flex-none w-[85vw] sm:w-[380px] snap-center bg-zinc-950 rounded-2xl border border-zinc-800 flex flex-col hover:border-indigo-500/50 hover:shadow-[0_0_30px_rgba(99,102,241,0.15)] transition-all duration-300"
-              data-category="professional">
-              <div class="p-6 flex flex-col h-full">
-                <div class="flex items-center gap-3 mb-3">
-                  <div
-                    class="w-10 h-10 bg-pink-500/10 rounded-lg flex items-center justify-center text-pink-400 flex-shrink-0">
-                    <i class="ph ph-baby text-xl"></i>
-                  </div>
-                  <h3 class="text-xl font-bold truncate text-white">Beginnings</h3>
-                </div>
-                <div class="mb-4">
-                  <span
-                    class="inline-block px-2.5 py-1 text-[10px] uppercase tracking-wider font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 rounded-full">Production</span>
-                </div>
-                <p class="text-zinc-400 text-sm mb-5">Maternity and pregnancy tracking application by Allina Health,
-                  providing essential resources for expecting mothers.</p>
-                <div class="flex flex-wrap gap-2 mb-6 flex-grow content-start">
-                  <span class="px-2 py-1 bg-black border border-zinc-800 text-zinc-300 text-xs rounded">Swift</span>
-                  <span class="px-2 py-1 bg-black border border-zinc-800 text-zinc-300 text-xs rounded">UIKit</span>
-                  <span class="px-2 py-1 bg-black border border-zinc-800 text-zinc-300 text-xs rounded">Core Data</span>
-                  <span class="px-2 py-1 bg-black border border-zinc-800 text-zinc-300 text-xs rounded">MVC</span>
-                </div>
-                <div class="mt-auto pt-4 border-t border-zinc-800/60">
-                  <a href="https://apps.apple.com/us/app/beginnings-by-allina-health/id1349303209" target="_blank"
-                    class="inline-flex items-center text-indigo-400 hover:text-indigo-300 text-sm font-medium transition-colors">
-                    View on App Store <i class="ph-bold ph-arrow-right ml-2"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <!-- Cancer Connection -->
-            <div
-              class="project-card flex-none w-[85vw] sm:w-[380px] snap-center bg-zinc-950 rounded-2xl border border-zinc-800 flex flex-col hover:border-indigo-500/50 hover:shadow-[0_0_30px_rgba(99,102,241,0.15)] transition-all duration-300"
-              data-category="professional">
-              <div class="p-6 flex flex-col h-full">
-                <div class="flex items-center gap-3 mb-3">
-                  <div
-                    class="w-10 h-10 bg-amber-900/20 rounded-lg flex items-center justify-center text-amber-500 flex-shrink-0 border border-amber-800/30">
-                    <i class="ph ph-hospital text-xl"></i>
-                  </div>
-                  <h3 class="text-xl font-bold truncate text-white">Cancer Connection</h3>
-                </div>
-                <div class="mb-4">
-                  <span
-                    class="inline-block px-2.5 py-1 text-[10px] uppercase tracking-wider font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 rounded-full">Production</span>
-                </div>
-                <p class="text-zinc-400 text-sm mb-5">Support network and resource hub app designed for oncology
-                  patients to navigate their treatment.</p>
-                <div class="flex flex-wrap gap-2 mb-6 flex-grow content-start">
-                  <span class="px-2 py-1 bg-black border border-zinc-800 text-zinc-300 text-xs rounded">Swift</span>
-                  <span class="px-2 py-1 bg-black border border-zinc-800 text-zinc-300 text-xs rounded">SwiftUI</span>
-                  <span class="px-2 py-1 bg-black border border-zinc-800 text-zinc-300 text-xs rounded">MVVM</span>
-                </div>
-                <div class="mt-auto pt-4 border-t border-zinc-800/60">
-                  <a href="https://apps.apple.com/us/app/cancer-connection/id6758400931" target="_blank"
-                    class="inline-flex items-center text-indigo-400 hover:text-indigo-300 text-sm font-medium transition-colors">
-                    View on App Store <i class="ph-bold ph-arrow-right ml-2"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <!-- graphql -->
-            <div
-              class="project-card flex-none w-[85vw] sm:w-[380px] snap-center bg-zinc-950 rounded-2xl border border-zinc-800 flex flex-col hover:border-cyan-500/50 hover:shadow-[0_0_30px_rgba(6,182,212,0.15)] transition-all duration-300"
-              data-category="personal">
-              <div class="p-6 flex flex-col h-full">
-                <div class="flex items-center gap-3 mb-3">
-                  <div
-                    class="w-10 h-10 bg-zinc-900 rounded-lg flex items-center justify-center text-zinc-300 flex-shrink-0 border border-zinc-800">
-                    <i class="ph ph-graph text-xl"></i>
-                  </div>
-                  <h3 class="text-xl font-bold truncate text-white">graphql</h3>
-                </div>
-                <div class="mb-4">
-                  <span
-                    class="inline-block px-2.5 py-1 text-[10px] uppercase tracking-wider font-semibold bg-amber-500/10 text-amber-400 border border-amber-500/20 rounded-full">In
-                    Progress</span>
-                </div>
-                <p class="text-zinc-400 text-sm mb-5">Exploration and implementation of GraphQL APIs for optimized data
-                  fetching and modern backend architecture.</p>
-                <div class="flex flex-wrap gap-2 mb-6 flex-grow content-start">
-                  <span class="px-2 py-1 bg-black border border-zinc-800 text-zinc-300 text-xs rounded">Node.js</span>
-                  <span class="px-2 py-1 bg-black border border-zinc-800 text-zinc-300 text-xs rounded">GraphQL</span>
-                  <span
-                    class="px-2 py-1 bg-black border border-zinc-800 text-zinc-300 text-xs rounded">TypeScript</span>
-                </div>
-                <div class="mt-auto pt-4 border-t border-zinc-800/60">
-                  <a href="https://github.com/enrydell/graphql" target="_blank"
-                    class="inline-flex items-center text-cyan-400 hover:text-cyan-300 text-sm font-medium transition-colors">
-                    View Repository <i class="ph-bold ph-arrow-right ml-2"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <!-- SoftEngine -->
-            <div
-              class="project-card flex-none w-[85vw] sm:w-[380px] snap-center bg-zinc-950 rounded-2xl border border-zinc-800 flex flex-col hover:border-cyan-500/50 hover:shadow-[0_0_30px_rgba(6,182,212,0.15)] transition-all duration-300"
-              data-category="personal">
-              <div class="p-6 flex flex-col h-full">
-                <div class="flex items-center gap-3 mb-3">
-                  <div
-                    class="w-10 h-10 bg-zinc-900 rounded-lg flex items-center justify-center text-zinc-300 flex-shrink-0 border border-zinc-800">
-                    <i class="ph ph-engine text-xl"></i>
-                  </div>
-                  <h3 class="text-xl font-bold truncate text-white">SoftEngine</h3>
-                </div>
-                <div class="mb-4">
-                  <span
-                    class="inline-block px-2.5 py-1 text-[10px] uppercase tracking-wider font-semibold bg-amber-500/10 text-amber-400 border border-amber-500/20 rounded-full">In
-                    Progress</span>
-                </div>
-                <p class="text-zinc-400 text-sm mb-5">A custom software rendering engine built from scratch to
-                  understand lower-level graphics concepts and math.</p>
-                <div class="flex flex-wrap gap-2 mb-6 flex-grow content-start">
-                  <span class="px-2 py-1 bg-black border border-zinc-800 text-zinc-300 text-xs rounded">C++</span>
-                  <span class="px-2 py-1 bg-black border border-zinc-800 text-zinc-300 text-xs rounded">Unreal
-                    Engine</span>
-                </div>
-                <div class="mt-auto pt-4 border-t border-zinc-800/60">
-                  <a href="https://github.com/enrydell/SoftEngine" target="_blank"
-                    class="inline-flex items-center text-cyan-400 hover:text-cyan-300 text-sm font-medium transition-colors">
-                    View Repository <i class="ph-bold ph-arrow-right ml-2"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <!-- GamingTrak -->
-            <div
-              class="project-card flex-none w-[85vw] sm:w-[380px] snap-center bg-zinc-950 rounded-2xl border border-zinc-800 flex flex-col hover:border-cyan-500/50 hover:shadow-[0_0_30px_rgba(6,182,212,0.15)] transition-all duration-300"
-              data-category="personal">
-              <div class="p-6 flex flex-col h-full">
-                <div class="flex items-center gap-3 mb-3">
-                  <div
-                    class="w-10 h-10 bg-zinc-900 rounded-lg flex items-center justify-center text-zinc-300 flex-shrink-0 border border-zinc-800">
-                    <i class="ph ph-game-controller text-xl"></i>
-                  </div>
-                  <h3 class="text-xl font-bold truncate text-white">GamingTrak</h3>
-                </div>
-                <div class="mb-4">
-                  <span
-                    class="inline-block px-2.5 py-1 text-[10px] uppercase tracking-wider font-semibold bg-amber-500/10 text-amber-400 border border-amber-500/20 rounded-full">In
-                    Progress</span>
-                </div>
-                <p class="text-zinc-400 text-sm mb-5">A personal tracking application for organizing gaming backlogs,
-                  playthroughs, and completion statuses.</p>
-                <div class="flex flex-wrap gap-2 mb-6 flex-grow content-start">
-                  <span class="px-2 py-1 bg-black border border-zinc-800 text-zinc-300 text-xs rounded">React
-                    Native</span>
-                  <span class="px-2 py-1 bg-black border border-zinc-800 text-zinc-300 text-xs rounded">Expo
-                    Router</span>
-                  <span
-                    class="px-2 py-1 bg-black border border-zinc-800 text-zinc-300 text-xs rounded">TypeScript</span>
-                </div>
-                <div class="mt-auto pt-4 border-t border-zinc-800/60">
-                  <a href="https://github.com/enrydell/GamingTrak" target="_blank"
-                    class="inline-flex items-center text-cyan-400 hover:text-cyan-300 text-sm font-medium transition-colors">
-                    View Repository <i class="ph-bold ph-arrow-right ml-2"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <!-- EBAC2D -->
-            <div
-              class="project-card flex-none w-[85vw] sm:w-[380px] snap-center bg-zinc-950 rounded-2xl border border-zinc-800 flex flex-col hover:border-cyan-500/50 hover:shadow-[0_0_30px_rgba(6,182,212,0.15)] transition-all duration-300"
-              data-category="personal">
-              <div class="p-6 flex flex-col h-full">
-                <div class="flex items-center gap-3 mb-3">
-                  <div
-                    class="w-10 h-10 bg-zinc-900 rounded-lg flex items-center justify-center text-zinc-300 flex-shrink-0 border border-zinc-800">
-                    <i class="ph ph-game-controller text-xl"></i>
-                  </div>
-                  <h3 class="text-xl font-bold truncate text-white">EBAC2D</h3>
-                </div>
-                <div class="mb-4">
-                  <span
-                    class="inline-block px-2.5 py-1 text-[10px] uppercase tracking-wider font-semibold bg-zinc-800/80 text-zinc-300 border border-zinc-700/50 rounded-full">Completed</span>
-                </div>
-                <p class="text-zinc-400 text-sm mb-5">Coursework and projects developed during educational initiatives,
-                  showcasing applied programming concepts.</p>
-                <div class="flex flex-wrap gap-2 mb-6 flex-grow content-start">
-                  <span class="px-2 py-1 bg-black border border-zinc-800 text-zinc-300 text-xs rounded">C++</span>
-                  <span class="px-2 py-1 bg-black border border-zinc-800 text-zinc-300 text-xs rounded">Unreal
-                    Engine</span>
-                </div>
-                <div class="mt-auto pt-4 border-t border-zinc-800/60">
-                  <a href="https://github.com/enrydell/EBAC2D" target="_blank"
-                    class="inline-flex items-center text-cyan-400 hover:text-cyan-300 text-sm font-medium transition-colors">
-                    View Repository <i class="ph-bold ph-arrow-right ml-2"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <!-- PlataformaEBAC -->
-            <div
-              class="project-card flex-none w-[85vw] sm:w-[380px] snap-center bg-zinc-950 rounded-2xl border border-zinc-800 flex flex-col hover:border-cyan-500/50 hover:shadow-[0_0_30px_rgba(6,182,212,0.15)] transition-all duration-300"
-              data-category="personal">
-              <div class="p-6 flex flex-col h-full">
-                <div class="flex items-center gap-3 mb-3">
-                  <div
-                    class="w-10 h-10 bg-zinc-900 rounded-lg flex items-center justify-center text-zinc-300 flex-shrink-0 border border-zinc-800">
-                    <i class="ph ph-game-controller text-xl"></i>
-                  </div>
-                  <h3 class="text-xl font-bold truncate text-white">PlataformaEBAC</h3>
-                </div>
-                <div class="mb-4">
-                  <span
-                    class="inline-block px-2.5 py-1 text-[10px] uppercase tracking-wider font-semibold bg-zinc-800/80 text-zinc-300 border border-zinc-700/50 rounded-full">Completed</span>
-                </div>
-                <p class="text-zinc-400 text-sm mb-5">Coursework and projects developed during educational initiatives,
-                  showcasing applied programming concepts.</p>
-                <div class="flex flex-wrap gap-2 mb-6 flex-grow content-start">
-                  <span class="px-2 py-1 bg-black border border-zinc-800 text-zinc-300 text-xs rounded">C++</span>
-                  <span class="px-2 py-1 bg-black border border-zinc-800 text-zinc-300 text-xs rounded">Unreal
-                    Engine</span>
-                </div>
-                <div class="mt-auto pt-4 border-t border-zinc-800/60">
-                  <a href="https://github.com/enrydell/PlataformaEBAC" target="_blank"
-                    class="inline-flex items-center text-cyan-400 hover:text-cyan-300 text-sm font-medium transition-colors">
-                    View Repository <i class="ph-bold ph-arrow-right ml-2"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <!-- LandscapePlayground -->
-            <div
-              class="project-card flex-none w-[85vw] sm:w-[380px] snap-center bg-zinc-950 rounded-2xl border border-zinc-800 flex flex-col hover:border-cyan-500/50 hover:shadow-[0_0_30px_rgba(6,182,212,0.15)] transition-all duration-300"
-              data-category="personal">
-              <div class="p-6 flex flex-col h-full">
-                <div class="flex items-center gap-3 mb-3">
-                  <div
-                    class="w-10 h-10 bg-zinc-900 rounded-lg flex items-center justify-center text-zinc-300 flex-shrink-0 border border-zinc-800">
-                    <i class="ph ph-tree text-xl"></i>
-                  </div>
-                  <h3 class="text-xl font-bold truncate text-white">LandscapePlayground</h3>
-                </div>
-                <div class="mb-4">
-                  <span
-                    class="inline-block px-2.5 py-1 text-[10px] uppercase tracking-wider font-semibold bg-zinc-800/80 text-zinc-300 border border-zinc-700/50 rounded-full">Completed</span>
-                </div>
-                <p class="text-zinc-400 text-sm mb-5">Experimental repository for testing UI/UX concepts, animations,
-                  and new framework capabilities.</p>
-                <div class="flex flex-wrap gap-2 mb-6 flex-grow content-start">
-                  <span class="px-2 py-1 bg-black border border-zinc-800 text-zinc-300 text-xs rounded">C++</span>
-                  <span class="px-2 py-1 bg-black border border-zinc-800 text-zinc-300 text-xs rounded">Unreal
-                    Engine</span>
-                </div>
-                <div class="mt-auto pt-4 border-t border-zinc-800/60">
-                  <a href="https://github.com/enrydell/LandscapePlayground" target="_blank"
-                    class="inline-flex items-center text-cyan-400 hover:text-cyan-300 text-sm font-medium transition-colors">
-                    View Repository <i class="ph-bold ph-arrow-right ml-2"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <!-- base-node-ts -->
-            <div
-              class="project-card flex-none w-[85vw] sm:w-[380px] snap-center bg-zinc-950 rounded-2xl border border-zinc-800 flex flex-col hover:border-cyan-500/50 hover:shadow-[0_0_30px_rgba(6,182,212,0.15)] transition-all duration-300"
-              data-category="personal">
-              <div class="p-6 flex flex-col h-full">
-                <div class="flex items-center gap-3 mb-3">
-                  <div
-                    class="w-10 h-10 bg-zinc-900 rounded-lg flex items-center justify-center text-zinc-300 flex-shrink-0 border border-zinc-800">
-                    <i class="ph ph-file-ts text-xl"></i>
-                  </div>
-                  <h3 class="text-xl font-bold truncate text-white">base-node-ts</h3>
-                </div>
-                <div class="mb-4">
-                  <span
-                    class="inline-block px-2.5 py-1 text-[10px] uppercase tracking-wider font-semibold bg-zinc-800/80 text-zinc-300 border border-zinc-700/50 rounded-full">Completed</span>
-                </div>
-                <p class="text-zinc-400 text-sm mb-5">A custom pure Node.js HTTP framework built from scratch with
-                  TypeScript, focusing on clean architecture.</p>
-                <div class="flex flex-wrap gap-2 mb-6 flex-grow content-start">
-                  <span class="px-2 py-1 bg-black border border-zinc-800 text-zinc-300 text-xs rounded">Node.js</span>
-                  <span
-                    class="px-2 py-1 bg-black border border-zinc-800 text-zinc-300 text-xs rounded">TypeScript</span>
-                  <span class="px-2 py-1 bg-black border border-zinc-800 text-zinc-300 text-xs rounded">Custom HTTP
-                    Framework</span>
-                </div>
-                <div class="mt-auto pt-4 border-t border-zinc-800/60">
-                  <a href="https://github.com/enrydell/base-node-ts" target="_blank"
-                    class="inline-flex items-center text-cyan-400 hover:text-cyan-300 text-sm font-medium transition-colors">
-                    View Repository <i class="ph-bold ph-arrow-right ml-2"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-
-          </div>
-
-          <!-- Right Arrow -->
-          <button id="scroll-right" aria-label="Scroll right"
-            class="absolute -right-4 md:-right-12 z-10 p-3 bg-zinc-950 border border-zinc-700 rounded-full text-zinc-300 hover:text-white hover:bg-zinc-800 transition-all hidden sm:flex shadow-lg shadow-black/80">
-            <i class="ph-bold ph-caret-right text-xl"></i>
-          </button>
-
-        </div>
-      </div>
     </section>
 
-    <section id="about" class="py-24 px-4 bg-black">
-      <div class="max-w-4xl mx-auto">
-        <h2 class="text-3xl md:text-4xl font-bold mb-10 text-center text-white">About Me</h2>
+    <!-- Personal Projects Section -->
+    <section id="personal" class="py-16 sm:py-20 border-b border-zinc-800/80">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="flex items-center justify-between mb-8">
+                <div>
+                    <h2 class="text-2xl sm:text-3xl font-bold text-white mb-2 flex items-center gap-2">
+                        <i class="ph ph-code text-cyan-400"></i> Personal & Open Source
+                    </h2>
+                    <p class="text-zinc-400 text-sm sm:text-base">Custom engines, tools, backend frameworks, and experimental graphics code.</p>
+                </div>
+                <!-- Navigation Arrows -->
+                <div class="flex items-center gap-2">
+                    <button id="personal-prev" class="p-2.5 rounded-xl bg-zinc-800 border border-zinc-700 hover:bg-zinc-700 hover:text-cyan-400 text-zinc-300 transition-colors" aria-label="Previous Project">
+                        <i class="ph ph-caret-left text-lg"></i>
+                    </button>
+                    <button id="personal-next" class="p-2.5 rounded-xl bg-zinc-800 border border-zinc-700 hover:bg-zinc-700 hover:text-cyan-400 text-zinc-300 transition-colors" aria-label="Next Project">
+                        <i class="ph ph-caret-right text-lg"></i>
+                    </button>
+                </div>
+            </div>
 
-        <div class="space-y-6 text-zinc-400 leading-relaxed text-lg font-light">
-          <p>
-            I am a Senior iOS Developer and Full-Stack Engineer with a strong track record of designing and delivering
-            high-impact, scalable applications. Throughout my career, I have thrived at the intersection of robust
-            backend infrastructure and intuitive user experiences, with a particular focus on the demanding environments
-            of the healthcare and financial sectors.
-          </p>
-          <p>
-            My core expertise lies deeply within the iOS ecosystem. Utilizing Swift, SwiftUI, and UIKit, I build mobile
-            applications that are not only performant but also highly accessible. Working extensively on healthcare
-            platforms—such as Afya Whitebook and multiple applications for Allina Health—has ingrained in me a rigorous
-            approach to data security, precision, and user-centric design that directly impacts patient care and
-            provider workflows.
-          </p>
-          <p>
-            Beyond mobile client development, I possess robust full-stack capabilities. I architect and implement
-            scalable backends and APIs utilizing technologies like Node.js and Ruby on Rails. My experience extends to
-            building secure, resilient systems for critical banking infrastructure, where ensuring absolute data
-            integrity, transaction safety, and high availability is paramount.
-          </p>
-          <p>
-            At the heart of my work is a deep commitment to clean architecture, scalable design patterns, and continuous
-            learning. Whether I am exploring modern API paradigms like GraphQL, engineering custom graphics engines from
-            scratch, or optimizing backend performance, my ultimate goal is always to deliver elegant, maintainable
-            solutions to complex technical challenges.
-          </p>
+            <!-- Personal Carousel -->
+            <div id="personal-carousel" class="flex gap-6 overflow-x-auto snap-x snap-mandatory no-scrollbar pb-6">
+                <!-- GraphQL Engine -->
+                <div class="project-card flex-shrink-0 w-[88vw] sm:w-[420px] snap-start bg-zinc-950 border border-zinc-800 hover:border-zinc-700 rounded-2xl p-6 flex flex-col justify-between transition-all">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-xl bg-cyan-950/60 border border-cyan-800/50 flex items-center justify-center text-cyan-400">
+                                    <i class="ph ph-brackets-curly text-xl"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-white">GraphQL Engine</h3>
+                            </div>
+                            <span class="px-2.5 py-1 rounded-full text-xs font-mono bg-amber-950/60 border border-amber-800/60 text-amber-400">In Progress</span>
+                        </div>
+                        <p class="text-zinc-400 text-sm leading-relaxed mb-6">Custom lightweight GraphQL client implementation focusing on type safety, schema queries, and efficient caching mechanics.</p>
+                        <div class="flex flex-wrap gap-1.5 mb-6">
+                            <span class="px-2 py-0.5 rounded text-xs font-mono bg-zinc-900 border border-zinc-800 text-zinc-300">TypeScript</span>
+                            <span class="px-2 py-0.5 rounded text-xs font-mono bg-zinc-900 border border-zinc-800 text-zinc-300">GraphQL</span>
+                            <span class="px-2 py-0.5 rounded text-xs font-mono bg-zinc-900 border border-zinc-800 text-zinc-300">Node.js</span>
+                        </div>
+                    </div>
+                    <a href="https://github.com/enrydell/graphql" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 w-full py-2.5 px-4 rounded-xl bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 text-sm font-medium text-cyan-400 transition-colors">
+                        View Repository <i class="ph ph-arrow-up-right"></i>
+                    </a>
+                </div>
+
+                <!-- SoftEngine -->
+                <div class="project-card flex-shrink-0 w-[88vw] sm:w-[420px] snap-start bg-zinc-950 border border-zinc-800 hover:border-zinc-700 rounded-2xl p-6 flex flex-col justify-between transition-all">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-xl bg-cyan-950/60 border border-cyan-800/50 flex items-center justify-center text-cyan-400">
+                                    <i class="ph ph-cube text-xl"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-white">SoftEngine</h3>
+                            </div>
+                            <span class="px-2.5 py-1 rounded-full text-xs font-mono bg-amber-950/60 border border-amber-800/60 text-amber-400">In Progress</span>
+                        </div>
+                        <p class="text-zinc-400 text-sm leading-relaxed mb-6">3D software rasterizer built from scratch to understand graphics pipelines, camera transformations, and 3D rendering algorithms.</p>
+                        <div class="flex flex-wrap gap-1.5 mb-6">
+                            <span class="px-2 py-0.5 rounded text-xs font-mono bg-zinc-900 border border-zinc-800 text-zinc-300">TypeScript</span>
+                            <span class="px-2 py-0.5 rounded text-xs font-mono bg-zinc-900 border border-zinc-800 text-zinc-300">HTML5 Canvas</span>
+                            <span class="px-2 py-0.5 rounded text-xs font-mono bg-zinc-900 border border-zinc-800 text-zinc-300">3D Math</span>
+                        </div>
+                    </div>
+                    <a href="https://github.com/enrydell/SoftEngine" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 w-full py-2.5 px-4 rounded-xl bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 text-sm font-medium text-cyan-400 transition-colors">
+                        View Repository <i class="ph ph-arrow-up-right"></i>
+                    </a>
+                </div>
+
+                <!-- GamingTrak -->
+                <div class="project-card flex-shrink-0 w-[88vw] sm:w-[420px] snap-start bg-zinc-950 border border-zinc-800 hover:border-zinc-700 rounded-2xl p-6 flex flex-col justify-between transition-all">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-xl bg-cyan-950/60 border border-cyan-800/50 flex items-center justify-center text-cyan-400">
+                                    <i class="ph ph-game-controller text-xl"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-white">GamingTrak</h3>
+                            </div>
+                            <span class="px-2.5 py-1 rounded-full text-xs font-mono bg-amber-950/60 border border-amber-800/60 text-amber-400">In Progress</span>
+                        </div>
+                        <p class="text-zinc-400 text-sm leading-relaxed mb-6">Mobile gaming backlog and stats tracking application built using Expo Router, React Native, and modern VIPER architecture.</p>
+                        <div class="flex flex-wrap gap-1.5 mb-6">
+                            <span class="px-2 py-0.5 rounded text-xs font-mono bg-zinc-900 border border-zinc-800 text-zinc-300">React Native</span>
+                            <span class="px-2 py-0.5 rounded text-xs font-mono bg-zinc-900 border border-zinc-800 text-zinc-300">Expo Router</span>
+                            <span class="px-2 py-0.5 rounded text-xs font-mono bg-zinc-900 border border-zinc-800 text-zinc-300">TypeScript</span>
+                            <span class="px-2 py-0.5 rounded text-xs font-mono bg-zinc-900 border border-zinc-800 text-zinc-300">VIPER</span>
+                        </div>
+                    </div>
+                    <a href="https://github.com/enrydell/GamingTrak" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 w-full py-2.5 px-4 rounded-xl bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 text-sm font-medium text-cyan-400 transition-colors">
+                        View Repository <i class="ph ph-arrow-up-right"></i>
+                    </a>
+                </div>
+
+                <!-- base-node-ts -->
+                <div class="project-card flex-shrink-0 w-[88vw] sm:w-[420px] snap-start bg-zinc-950 border border-zinc-800 hover:border-zinc-700 rounded-2xl p-6 flex flex-col justify-between transition-all">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-xl bg-cyan-950/60 border border-cyan-800/50 flex items-center justify-center text-cyan-400">
+                                    <i class="ph ph-cpu text-xl"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-white">base-node-ts</h3>
+                            </div>
+                            <span class="px-2.5 py-1 rounded-full text-xs font-mono bg-zinc-800 border border-zinc-700 text-zinc-300">Completed</span>
+                        </div>
+                        <p class="text-zinc-400 text-sm leading-relaxed mb-6">Custom lightweight Node.js HTTP web framework built entirely from scratch in TypeScript with zero external framework dependencies.</p>
+                        <div class="flex flex-wrap gap-1.5 mb-6">
+                            <span class="px-2 py-0.5 rounded text-xs font-mono bg-zinc-900 border border-zinc-800 text-zinc-300">Node.js</span>
+                            <span class="px-2 py-0.5 rounded text-xs font-mono bg-zinc-900 border border-zinc-800 text-zinc-300">TypeScript</span>
+                            <span class="px-2 py-0.5 rounded text-xs font-mono bg-zinc-900 border border-zinc-800 text-zinc-300">Custom HTTP Framework</span>
+                        </div>
+                    </div>
+                    <a href="https://github.com/enrydell/base-node-ts" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 w-full py-2.5 px-4 rounded-xl bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 text-sm font-medium text-cyan-400 transition-colors">
+                        View Repository <i class="ph ph-arrow-up-right"></i>
+                    </a>
+                </div>
+
+                <!-- EBAC2D -->
+                <div class="project-card flex-shrink-0 w-[88vw] sm:w-[420px] snap-start bg-zinc-950 border border-zinc-800 hover:border-zinc-700 rounded-2xl p-6 flex flex-col justify-between transition-all">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-xl bg-cyan-950/60 border border-cyan-800/50 flex items-center justify-center text-cyan-400">
+                                    <i class="ph ph-game-controller text-xl"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-white">EBAC2D</h3>
+                            </div>
+                            <span class="px-2.5 py-1 rounded-full text-xs font-mono bg-zinc-800 border border-zinc-700 text-zinc-300">Completed</span>
+                        </div>
+                        <p class="text-zinc-400 text-sm leading-relaxed mb-6">2D pickup-style game built featuring custom UI menus, state management, and optimized sprite collision physics.</p>
+                        <div class="flex flex-wrap gap-1.5 mb-6">
+                            <span class="px-2 py-0.5 rounded text-xs font-mono bg-zinc-900 border border-zinc-800 text-zinc-300">C#</span>
+                            <span class="px-2 py-0.5 rounded text-xs font-mono bg-zinc-900 border border-zinc-800 text-zinc-300">Unity</span>
+                            <span class="px-2 py-0.5 rounded text-xs font-mono bg-zinc-900 border border-zinc-800 text-zinc-300">2D Physics</span>
+                        </div>
+                    </div>
+                    <a href="https://github.com/enrydell/EBAC2D" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 w-full py-2.5 px-4 rounded-xl bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 text-sm font-medium text-cyan-400 transition-colors">
+                        View Repository <i class="ph ph-arrow-up-right"></i>
+                    </a>
+                </div>
+
+                <!-- LandscapePlayground -->
+                <div class="project-card flex-shrink-0 w-[88vw] sm:w-[420px] snap-start bg-zinc-950 border border-zinc-800 hover:border-zinc-700 rounded-2xl p-6 flex flex-col justify-between transition-all">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-xl bg-cyan-950/60 border border-cyan-800/50 flex items-center justify-center text-cyan-400">
+                                    <i class="ph ph-mountains text-xl"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-white">LandscapePlayground</h3>
+                            </div>
+                            <span class="px-2.5 py-1 rounded-full text-xs font-mono bg-zinc-800 border border-zinc-700 text-zinc-300">Completed</span>
+                        </div>
+                        <p class="text-zinc-400 text-sm leading-relaxed mb-6">Interactive 3D environment exploration featuring level-of-detail (LOD) scene optimizations and custom lighting setups.</p>
+                        <div class="flex flex-wrap gap-1.5 mb-6">
+                            <span class="px-2 py-0.5 rounded text-xs font-mono bg-zinc-900 border border-zinc-800 text-zinc-300">Unreal Engine</span>
+                            <span class="px-2 py-0.5 rounded text-xs font-mono bg-zinc-900 border border-zinc-800 text-zinc-300">C++</span>
+                            <span class="px-2 py-0.5 rounded text-xs font-mono bg-zinc-900 border border-zinc-800 text-zinc-300">Shaders & LOD</span>
+                        </div>
+                    </div>
+                    <a href="https://github.com/enrydell/LandscapePlayground" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 w-full py-2.5 px-4 rounded-xl bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 text-sm font-medium text-cyan-400 transition-colors">
+                        View Repository <i class="ph ph-arrow-up-right"></i>
+                    </a>
+                </div>
+
+                <!-- PlataformaEBAC -->
+                <div class="project-card flex-shrink-0 w-[88vw] sm:w-[420px] snap-start bg-zinc-950 border border-zinc-800 hover:border-zinc-700 rounded-2xl p-6 flex flex-col justify-between transition-all">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-xl bg-cyan-950/60 border border-cyan-800/50 flex items-center justify-center text-cyan-400">
+                                    <i class="ph ph-game-controller text-xl"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-white">PlataformaEBAC</h3>
+                            </div>
+                            <span class="px-2.5 py-1 rounded-full text-xs font-mono bg-zinc-800 border border-zinc-700 text-zinc-300">Completed</span>
+                        </div>
+                        <p class="text-zinc-400 text-sm leading-relaxed mb-6">Modular 2D platformer template mechanics including tilemaps, player controller state machines, and level transitions.</p>
+                        <div class="flex flex-wrap gap-1.5 mb-6">
+                            <span class="px-2 py-0.5 rounded text-xs font-mono bg-zinc-900 border border-zinc-800 text-zinc-300">C#</span>
+                            <span class="px-2 py-0.5 rounded text-xs font-mono bg-zinc-900 border border-zinc-800 text-zinc-300">Unity</span>
+                            <span class="px-2 py-0.5 rounded text-xs font-mono bg-zinc-900 border border-zinc-800 text-zinc-300">Tilemaps</span>
+                        </div>
+                    </div>
+                    <a href="https://github.com/enrydell/PlataformaEBAC" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 w-full py-2.5 px-4 rounded-xl bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 text-sm font-medium text-cyan-400 transition-colors">
+                        View Repository <i class="ph ph-arrow-up-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Carousel Pagination Dots -->
+            <div id="personal-dots" class="flex items-center justify-center gap-2 mt-4"></div>
         </div>
-      </div>
     </section>
 
-    <section id="contact" class="py-24 bg-zinc-900/80 border-t border-zinc-800/80">
-      <div class="max-w-4xl mx-auto px-4 text-center">
-        <h2 class="text-3xl md:text-4xl font-bold mb-6 text-white">Let's Connect</h2>
-        <p class="text-zinc-400 mb-12 text-lg">Whether you have a question, a project idea, or just want to say hi, I'll
-          try my best to get back to you!</p>
-
-        <div class="flex flex-col sm:flex-row justify-center gap-6">
-          <a href="mailto:henriquedell1@gmail.com"
-            class="group flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-semibold transition-all hover:shadow-[0_0_20px_rgba(99,102,241,0.4)] hover:-translate-y-1 w-full sm:w-auto">
-            <i class="ph-fill ph-envelope-simple text-2xl"></i>
-            Email Me
-          </a>
-
-          <a href="https://www.linkedin.com/in/henriquedell/" target="_blank"
-            class="group flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-[#0A66C2] hover:bg-[#0d7ceb] text-white font-semibold transition-all hover:shadow-[0_0_20px_rgba(10,102,194,0.4)] hover:-translate-y-1 w-full sm:w-auto">
-            <i class="ph-fill ph-linkedin-logo text-2xl"></i>
-            LinkedIn
-          </a>
-
-          <a href="https://github.com/enrydell" target="_blank"
-            class="group flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-zinc-950 border border-zinc-700 hover:bg-zinc-800 text-white font-semibold transition-all hover:-translate-y-1 w-full sm:w-auto">
-            <i class="ph-fill ph-github-logo text-2xl"></i>
-            GitHub
-          </a>
+    <!-- About Me Section -->
+    <section id="about" class="max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-24 border-b border-zinc-800/80">
+        <div class="max-w-3xl">
+            <h2 class="text-2xl sm:text-3xl font-bold text-white mb-8 flex items-center gap-2">
+                <i class="ph ph-user-circle text-cyan-400"></i> About Me
+            </h2>
+            <div class="space-y-6 text-zinc-300 text-base sm:text-lg leading-relaxed">
+                <p>
+                    I am a Senior iOS Developer and Full-Stack Software Engineer with extensive experience designing, building, and deploying mission-critical mobile applications and backend services. Over the years, I have specialized in native Apple ecosystems (Swift, SwiftUI, UIKit) alongside modern backend technologies like Node.js, TypeScript, and SQL databases.
+                </p>
+                <p>
+                    My professional journey includes architecting large-scale mobile applications in demanding industries such as healthcare and banking. I've contributed to flagship iOS platforms like <strong>Afya Whitebook</strong>—Brazil's primary medical decision app—as well as the suite of digital healthcare apps for <strong>Allina Health</strong>, focusing on offline data synchronization, modular design patterns (MVVM, VIPER, Clean Architecture), and automated CI/CD pipelines.
+                </p>
+                <p>
+                    Beyond commercial app development, I am deeply invested in software architecture and low-level computer graphics. In my personal projects, I regularly experiment with building custom HTTP frameworks, 3D software rasterizers from scratch, and 2D/3D game systems using Unity and C++. I believe that understanding underlying computer science fundamentals makes for better abstractions in high-level software engineering.
+                </p>
+                <p>
+                    When I'm not coding or refining architecture patterns, I enjoy exploring real-time graphics optimizations, managing my technical ventures, and diving into immersive video games.
+                </p>
+            </div>
         </div>
-      </div>
     </section>
-  </main>
 
-  <footer class="py-8 text-center border-t border-zinc-900 bg-black text-zinc-600 text-sm">
-    <p>&copy; <span id="year"></span> Henrique Dell. Built with HTML, Tailwind CSS & JS.</p>
-  </footer>
+    <!-- Contact Section -->
+    <section id="contact" class="bg-zinc-900/80 py-16 sm:py-24">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 text-center">
+            <div class="max-w-2xl mx-auto">
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-4">Let's Connect</h2>
+                <p class="text-zinc-400 text-base sm:text-lg mb-10">
+                    Whether you want to discuss mobile development, system architecture, game graphics, or potential collaborations—feel free to reach out!
+                </p>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                    <a href="https://github.com/enrydell" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center justify-center p-6 rounded-2xl bg-zinc-950 border border-zinc-800 hover:border-cyan-500/80 group transition-all">
+                        <i class="ph ph-github-logo text-3xl text-zinc-400 group-hover:text-cyan-400 mb-3 transition-colors"></i>
+                        <span class="font-bold text-white text-base">GitHub</span>
+                        <span class="text-xs text-zinc-500 font-mono mt-1">@enrydell</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/henriquedell/" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center justify-center p-6 rounded-2xl bg-zinc-950 border border-zinc-800 hover:border-cyan-500/80 group transition-all">
+                        <i class="ph ph-linkedin-logo text-3xl text-zinc-400 group-hover:text-cyan-400 mb-3 transition-colors"></i>
+                        <span class="font-bold text-white text-base">LinkedIn</span>
+                        <span class="text-xs text-zinc-500 font-mono mt-1">/in/henriquedell</span>
+                    </a>
+                    <a href="mailto:henriquedell1@gmail.com" class="flex flex-col items-center justify-center p-6 rounded-2xl bg-zinc-950 border border-zinc-800 hover:border-cyan-500/80 group transition-all">
+                        <i class="ph ph-envelope-simple text-3xl text-zinc-400 group-hover:text-cyan-400 mb-3 transition-colors"></i>
+                        <span class="font-bold text-white text-base">Email</span>
+                        <span class="text-xs text-zinc-500 font-mono mt-1">henriquedell1@gmail.com</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <script>
-    // Set current year in footer
-    document.getElementById('year').textContent = new Date().getFullYear();
+    <!-- Footer -->
+    <footer class="bg-black py-8 border-t border-zinc-800/80 text-center text-xs text-zinc-500">
+        <div class="max-w-6xl mx-auto px-4">
+            <p>© <span id="year"></span> Henrique Dell. Hosted on GitHub Pages.</p>
+        </div>
+    </footer>
 
-    // Mobile menu toggle
-    const btn = document.getElementById('mobile-menu-btn');
-    const menu = document.getElementById('mobile-menu');
+    <!-- JavaScript Carousel & Helper Logic -->
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
 
-    btn.addEventListener('click', () => {
-      menu.classList.toggle('hidden');
-    });
+        // Helper function to setup independent carousels with buttons and interactive dots
+        function setupCarousel(carouselId, dotsId, prevBtnId, nextBtnId) {
+            const carousel = document.getElementById(carouselId);
+            const dotsContainer = document.getElementById(dotsId);
+            const prevBtn = document.getElementById(prevBtnId);
+            const nextBtn = document.getElementById(nextBtnId);
 
-    // Close mobile menu on link click
-    document.querySelectorAll('#mobile-menu a').forEach(link => {
-      link.addEventListener('click', () => {
-        menu.classList.add('hidden');
-      });
-    });
+            if (!carousel || !dotsContainer) return;
 
-    // Carousel Scroll Logic
-    const carousel = document.getElementById('project-carousel');
-    const scrollLeftBtn = document.getElementById('scroll-left');
-    const scrollRightBtn = document.getElementById('scroll-right');
-    const scrollAmount = 400; // Matches card width + gap
+            const cards = carousel.querySelectorAll('.project-card');
+            dotsContainer.innerHTML = '';
 
-    scrollLeftBtn.addEventListener('click', () => {
-      carousel.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
-    });
+            // Generate dots
+            cards.forEach((_, index) => {
+                const dot = document.createElement('button');
+                dot.setAttribute('aria-label', `Go to slide ${index + 1}`);
+                dot.className = index === 0 
+                    ? 'w-6 h-2.5 rounded-full bg-cyan-400 transition-all duration-300' 
+                    : 'w-2.5 h-2.5 rounded-full bg-zinc-700 hover:bg-zinc-500 transition-all duration-300';
+                
+                dot.addEventListener('click', () => {
+                    const cardWidth = cards[0].offsetWidth + 24; // Width + gap
+                    carousel.scrollTo({
+                        left: index * cardWidth,
+                        behavior: 'smooth'
+                    });
+                });
+                dotsContainer.appendChild(dot);
+            });
 
-    scrollRightBtn.addEventListener('click', () => {
-      carousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-    });
+            // Update active dot on scroll
+            const updateActiveDot = () => {
+                const cardWidth = cards[0].offsetWidth + 24;
+                const activeIndex = Math.round(carousel.scrollLeft / cardWidth);
+                const dots = dotsContainer.querySelectorAll('button');
 
-    // Project Filtering Logic
-    const filterBtns = document.querySelectorAll('.filter-btn');
-    const projectCards = document.querySelectorAll('.project-card');
+                dots.forEach((dot, idx) => {
+                    if (idx === activeIndex) {
+                        dot.className = 'w-6 h-2.5 rounded-full bg-cyan-400 transition-all duration-300';
+                    } else {
+                        dot.className = 'w-2.5 h-2.5 rounded-full bg-zinc-700 hover:bg-zinc-500 transition-all duration-300';
+                    }
+                });
+            };
 
-    filterBtns.forEach(btn => {
-      btn.addEventListener('click', () => {
-        // Update active button styling
-        filterBtns.forEach(b => {
-          b.classList.remove('bg-indigo-600', 'text-white', 'active', 'border-transparent');
-          b.classList.add('bg-black/60', 'text-zinc-400', 'border-zinc-800');
-        });
-        btn.classList.remove('bg-black/60', 'text-zinc-400', 'border-zinc-800');
-        btn.classList.add('bg-indigo-600', 'text-white', 'active', 'border-transparent');
+            carousel.addEventListener('scroll', updateActiveDot);
 
-        const filterValue = btn.getAttribute('data-filter');
+            // Button controls
+            if (prevBtn) {
+                prevBtn.addEventListener('click', () => {
+                    const cardWidth = cards[0].offsetWidth + 24;
+                    carousel.scrollBy({ left: -cardWidth, behavior: 'smooth' });
+                });
+            }
 
-        // Filter cards
-        projectCards.forEach(card => {
-          if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
-            card.style.display = 'flex'; // Use flex to maintain card layout
-            card.style.opacity = '0';
-            setTimeout(() => {
-              card.style.transition = 'opacity 0.3s ease';
-              card.style.opacity = '1';
-            }, 10);
-          } else {
-            card.style.display = 'none';
-          }
-        });
+            if (nextBtn) {
+                nextBtn.addEventListener('click', () => {
+                    const cardWidth = cards[0].offsetWidth + 24;
+                    carousel.scrollBy({ left: cardWidth, behavior: 'smooth' });
+                });
+            }
+        }
 
-        // Reset scroll position of carousel
-        carousel.scrollTo({ left: 0, behavior: 'smooth' });
-      });
-    });
-  </script>
+        // Initialize carousels
+        setupCarousel('pro-carousel', 'pro-dots', 'pro-prev', 'pro-next');
+        setupCarousel('personal-carousel', 'personal-dots', 'personal-prev', 'personal-next');
+    </script>
 </body>
-
 </html>
