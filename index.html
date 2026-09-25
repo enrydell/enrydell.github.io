@@ -727,50 +727,40 @@
       const leftBtn = document.getElementById(leftBtnId);
       const rightBtn = document.getElementById(rightBtnId);
       const dotsContainer = document.getElementById(dotsContainerId);
+
       if (!carousel) return;
 
-      const cards = carousel.querySelectorAll('.project-card');
-      const scrollAmount = 400; // Matches card width + gap
+      const updateDots = () => {
+        if (carousel.clientWidth === 0) return; // Prevent division by zero during load
 
-      leftBtn.addEventListener('click', () => {
-        carousel.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
-      });
+        // 1. Calculate how many full pages (viewports) are needed
+        const totalPages = Math.max(1, Math.ceil(carousel.scrollWidth / carousel.clientWidth));
 
-      rightBtn.addEventListener('click', () => {
-        carousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-      });
-
-      // Build dots
-      dotsContainer.innerHTML = '';
-      cards.forEach((card, index) => {
-        const dot = document.createElement('button');
-        dot.ariaLabel = `Go to slide ${index + 1}`;
-        dot.className = `w-2.5 h-2.5 rounded-full transition-all duration-300 ${index === 0 ? 'bg-indigo-500 w-6' : 'bg-zinc-700 hover:bg-zinc-500'}`;
-        dot.addEventListener('click', () => {
-          card.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
-        });
-        dotsContainer.appendChild(dot);
-      });
-
-      // Update active dot on scroll
-      const updateActiveDot = () => {
-        const dots = dotsContainer.children;
-        if (!dots.length) return;
-
-        let activeIndex = 0;
-        let minDiff = Infinity;
-        const carouselLeft = carousel.getBoundingClientRect().left;
-
-        cards.forEach((card, index) => {
-          const cardLeft = card.getBoundingClientRect().left;
-          const diff = Math.abs(cardLeft - carouselLeft);
-          if (diff < minDiff) {
-            minDiff = diff;
-            activeIndex = index;
+        // 2. Rebuild dots only if the count has changed (handles window resize)
+        if (dotsContainer.children.length !== totalPages) {
+          dotsContainer.innerHTML = '';
+          for (let i = 0; i < totalPages; i++) {
+            const dot = document.createElement('button');
+            dot.ariaLabel = `Go to page ${i + 1}`;
+            dot.className = 'w-2.5 h-2.5 rounded-full bg-zinc-700 hover:bg-zinc-500 transition-all duration-300';
+            dot.addEventListener('click', () => {
+              carousel.scrollTo({ left: i * carousel.clientWidth, behavior: 'smooth' });
+            });
+            dotsContainer.appendChild(dot);
           }
-        });
+        }
 
-        Array.from(dots).forEach((dot, index) => {
+        // 3. Determine the currently active page
+        let activeIndex = Math.round(carousel.scrollLeft / carousel.clientWidth);
+
+        // If the user has scrolled to the absolute end, ensure the last dot is highlighted
+        const isAtEnd = Math.ceil(carousel.scrollLeft + carousel.clientWidth) >= carousel.scrollWidth;
+        if (isAtEnd) {
+          activeIndex = totalPages - 1;
+        }
+
+        // 4. Update dot styling based on the active index
+        Array.from(dotsContainer.children).forEach((dot, index) => {
           if (index === activeIndex) {
             dot.className = 'w-6 h-2.5 rounded-full bg-indigo-500 transition-all duration-300';
           } else {
@@ -779,7 +769,25 @@
         });
       };
 
-      carousel.addEventListener('scroll', updateActiveDot);
+      // Update arrows to scroll by a full page width rather than a fixed 400px
+      if (leftBtn) {
+        leftBtn.addEventListener('click', () => {
+          carousel.scrollBy({ left: -carousel.clientWidth, behavior: 'smooth' });
+        });
+      }
+
+      if (rightBtn) {
+        rightBtn.addEventListener('click', () => {
+          carousel.scrollBy({ left: carousel.clientWidth, behavior: 'smooth' });
+        });
+      }
+
+      // Update pagination dots on scroll and when the window resizes
+      carousel.addEventListener('scroll', updateDots);
+      window.addEventListener('resize', updateDots);
+
+      // Initial calculation (short timeout ensures DOM is fully painted and dimensions are accurate)
+      setTimeout(updateDots, 100);
     }
 
     // Initialize Professional and Personal Carousels
